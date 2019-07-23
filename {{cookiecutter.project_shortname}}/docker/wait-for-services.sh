@@ -3,7 +3,7 @@
 
 # Verify that all services are running before continuing
 check_ready() {
-    RETRIES=20
+    RETRIES=100
     while ! $2
     do
         echo "Waiting for $1, $((RETRIES--)) remaining attempts..."

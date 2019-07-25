@@ -15,6 +15,7 @@ fi
 pipenv sync --dev
 # Install application code and entrypoints from 'setup.py'
 pipenv run pip install -e $script_path/..
+pipenv run pip install --upgrade git+https://github.com/monaawi/invenio-assets.git@test
 # Build assets
 pipenv run invenio collect -v
 pipenv run invenio webpack buildall
